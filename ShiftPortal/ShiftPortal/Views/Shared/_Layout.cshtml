@@ -10,20 +10,25 @@
 <body>
 
 <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-faded">
-        @Html.ActionLink("Shift Portal", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        @*<nav class="navbar navbar-dark bg-dark">*@
+        @Html.ActionLink("Shift Portal", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
+        @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+        </button>*@
+        <div class="navbar-collapse collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
+                    @*<a class="nav-link" href="Edit">Edit <span class="sr-only">(current)</span></a>*@
                     <a class="nav-link" href="#">Edit <span class="sr-only">(current)</span></a>
+                    @*<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Edit</a>*@
                 </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Login</button>
+                    @*<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Login</a>*@
+                    @*<a class="nav-link" href="Login">Login</a>*@
                 </li>
             </ul>
         </div>
@@ -33,7 +38,7 @@
     @RenderBody()
     <hr/>
     <footer>
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <p>&copy; @DateTime.Now.Year - CBS İç Yapımlar</p>
     </footer>
 </div>
 
